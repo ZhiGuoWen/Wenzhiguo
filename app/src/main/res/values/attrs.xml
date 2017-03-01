@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="titleBar">
+        <attr name="btn_backgroup" format="color"/>
+        <attr name="text_textView" format="string"/>
+        <attr name="img_imageView" format="reference"/>
+    </declare-styleable>
+</resources>

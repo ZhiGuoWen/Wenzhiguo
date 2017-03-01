@@ -1,0 +1,13 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wenzhiguo.wenzhiguo20170227.ShouyeFragment">
+
+    <com.wenzhiguo.wenzhiguo20170227.Image
+        android:id="@+id/image_view"
+        android:background="@drawable/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>
