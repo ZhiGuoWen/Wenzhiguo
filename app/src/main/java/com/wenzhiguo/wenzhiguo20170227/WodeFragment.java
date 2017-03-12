@@ -13,11 +13,6 @@ import android.view.ViewGroup;
  */
 public class WodeFragment extends Fragment {
 
-
-    public WodeFragment() {
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -5,13 +5,15 @@
     >
 
     <com.wenzhiguo.wenzhiguo20170227.TitleView
+        android:layout_alignParentBottom="true"
         android:id="@+id/titleview"
         app:btn_backgroup="#f00"
         app:text_textView="温志国"
         app:img_imageView="@drawable/a"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </com.wenzhiguo.wenzhiguo20170227.TitleView>
-
+        android:layout_height="100dp"/>
+    <com.wenzhiguo.wenzhiguo20170227.Rect
+        android:layout_above="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>

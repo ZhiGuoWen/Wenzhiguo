@@ -7,22 +7,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Random;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class QuanziFragment extends Fragment {
 
-
-    public QuanziFragment() {
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quanzi, container, false);
+        View inflate = inflater.inflate(R.layout.fragment_quanzi, container, false);
+
+        return inflate;
     }
 
 }

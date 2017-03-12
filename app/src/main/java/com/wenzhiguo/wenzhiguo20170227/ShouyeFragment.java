@@ -42,5 +42,4 @@ public class ShouyeFragment extends Fragment {
 
         return inflate;
     }
-
 }

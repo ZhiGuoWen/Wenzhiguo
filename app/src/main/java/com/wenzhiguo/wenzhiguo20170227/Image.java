@@ -16,6 +16,7 @@ public class Image extends ImageView {
     private Paint paint = new Paint();
     private int progress;
     private Rect rect;
+
     public Image(Context context) {
         super(context);
     }
@@ -46,17 +47,18 @@ public class Image extends ImageView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         //canvas.save();
-       // canvas.translate(300,300);
-
+        // canvas.translate(300,300);
+        //画笔颜色
         paint.setColor(Color.parseColor("#70000000"));
+        //背景颜色改变
         canvas.drawRect(0, 0, getWidth(), getHeight() - getHeight() * progress / 100, paint);
+        //覆盖之前颜色
         paint.setColor(Color.RED);
-
-       paint.setTextSize(50);
+        paint.setTextSize(50);
         if (progress < 100) {
             rect = new Rect();
             paint.getTextBounds("00%", 0, "00%".length(), rect);
-            canvas.drawText(progress + "%", getWidth() / 2- (rect.width()/2), getHeight() / 2, paint);
+            canvas.drawText(progress + "%", getWidth() / 2 - (rect.width() / 2), getHeight() / 2, paint);
         } else {
             canvas.drawText("", getWidth() / 2, getHeight() / 2, paint);
         }
@@ -66,7 +68,6 @@ public class Image extends ImageView {
     public void setProgress(int progress) {
         this.progress = progress;
         postInvalidate();
-
     }
 }
 

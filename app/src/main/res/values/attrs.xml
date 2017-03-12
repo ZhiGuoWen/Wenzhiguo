@@ -5,4 +5,11 @@
         <attr name="text_textView" format="string"/>
         <attr name="img_imageView" format="reference"/>
     </declare-styleable>
+    <declare-styleable name="BarView">
+        <attr name="textSize" format="dimension" />
+        <attr name="textbackgroup" format="color"/>
+        <attr name="text" format="string"/>
+        <attr name="banjin1" format="dimension"/>
+        <attr name="banjin2" format="dimension"/>
+    </declare-styleable>
 </resources>
