@@ -47,19 +47,20 @@ public class BarView extends View {
         super.onDraw(canvas);
         paint.setColor(Color.BLUE);
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, 150, paint);
-
+//        startAngle - 开始角度（以时钟3点的方向为0°，逆时针为正方向）
+//        sweepAngle - 扫过角度（以时钟3点的方向为0°，逆时针为正方向）
         paint.setColor(Color.RED);
-        rectF = new RectF(getWidth() / 2-150, getHeight() / 2-150, getWidth()/2+150 ,getHeight()/2+150);
-        canvas.drawArc(rectF,0,(float) (count*3.6),true,paint);
+        rectF = new RectF(getWidth() / 2 - 150, getHeight() / 2 - 150, getWidth() / 2 + 150, getHeight() / 2 + 150);
+        canvas.drawArc(rectF, 0, (float) (count * 3.6), true, paint);
 
         paint.setColor(Color.YELLOW);
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, 100, paint);
 
         paint.setTextSize(25);
         paint.setColor(Color.BLACK);
-        canvas.drawText(count + "%", getWidth() / 2 - 25, getHeight() / 2 , paint);
+        canvas.drawText(count + "%", getWidth() / 2 - 25, getHeight() / 2, paint);
 
-        if (thread == null){
+        if (thread == null) {
             thread = new Threads();
             thread.start();
         }
@@ -106,13 +107,14 @@ public class BarView extends View {
 //        //canvas.drawText("温",200,200,paint);
 //        //canvas.drawBitmap();*/
     }
-    class Threads extends Thread{
+
+    class Threads extends Thread {
         @Override
         public void run() {
             super.run();
-            while(true){
+            while (true) {
                 count++;
-                if (count<101){
+                if (count < 101) {
                     postInvalidate();
                 }
                 try {
